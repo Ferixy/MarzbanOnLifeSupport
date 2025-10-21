@@ -8,6 +8,7 @@
 </p>
 
 <h1 align="center"/>Marzban</h1>
+<h1 align="center"/>Latest Stable ver: 0.8.4.1</h1>
 
 <p align="center">
     Unified GUI Censorship Resistant Solution Powered by <a href="https://github.com/XTLS/Xray-core">Xray</a>
