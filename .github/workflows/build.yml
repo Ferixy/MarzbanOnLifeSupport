@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*.*.*.*"
 
 jobs:
   build-docker-image:
@@ -50,3 +50,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/ferixy/marzban:latest
+            ghcr.io/gozargah/marzban:${{github.ref_name}}
