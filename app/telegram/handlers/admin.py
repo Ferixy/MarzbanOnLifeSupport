@@ -51,15 +51,15 @@ def get_system_info():
         active_users = crud.get_users_count(db, UserStatus.active)
         onhold_users = crud.get_users_count(db, UserStatus.on_hold)
     return """\
-🎛 *CPU Cores*: `{cpu_cores}`
-🖥 *CPU Usage*: `{cpu_percent}%`
+🖥 *CPU Usage*: `{cpu_percent}%`    
+🎛 *CPU Core(s)*: `{cpu_cores}`
 ➖➖➖➖➖➖➖
-📊 *Total Memory*: `{total_memory}`
 📈 *In Use Memory*: `{used_memory}`
 📉 *Free Memory*: `{free_memory}`
+📊 *Total Memory*: `{total_memory}`
 ➖➖➖➖➖➖➖
-⬇️ *Download Usage*: `{down_bandwidth}`
-⬆️ *Upload Usage*: `{up_bandwidth}`
+⬇️ *Total Download*: `{down_bandwidth}`
+⬆️ *Total Upload*: `{up_bandwidth}`
 ↕️ *Total Usage*: `{total_bandwidth}`
 ➖➖➖➖➖➖➖
 👥 *Total Users*: `{total_users}`
@@ -67,8 +67,8 @@ def get_system_info():
 🟣 *OnHold Users*: `{onhold_users}`
 🔴 *Deactivate Users*: `{deactivate_users}`
 ➖➖➖➖➖➖➖
-⏫ *Upload Speed*: `{up_speed}/s`
 ⏬ *Download Speed*: `{down_speed}/s`
+⏫ *Upload Speed*: `{up_speed}/s`
 """.format(
         cpu_cores=cpu.cores,
         cpu_percent=cpu.percent,
@@ -110,9 +110,7 @@ def help_command(message: types.Message):
     bot.clear_step_handler_by_chat_id(message.chat.id)
     return bot.reply_to(message, """
 {user_link} Welcome to Marzban Telegram-Bot Admin Panel.
-Here you can manage your users and proxies.
-To get started, use the buttons below.
-Also, You can get and modify users by /user command.
+You can get and modify users info by using /user command.
 """.format(
         user_link=user_link(message.from_user)
     ), parse_mode="html", reply_markup=BotKeyboard.main_menu())
