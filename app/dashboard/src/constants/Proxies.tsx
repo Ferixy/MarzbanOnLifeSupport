@@ -11,7 +11,7 @@ export const proxyHostSecurity: { title: string; value: ProxyHostSecurity }[] =
       value: "tls",
     },
     {
-      title: "None",
+      title: "None (No Encryption)",
       value: "none",
     },
   ];
@@ -30,11 +30,11 @@ export const proxyALPN: { title: string; value: string }[] = [
     value: "h2",
   },
   {
-    title: "http/1.1",
+    title: "h1.1",
     value: "http/1.1",
   },
   {
-    title: "h3,h2,http/1.1",
+    title: "h3,h2,h1.1",
     value: "h3,h2,http/1.1",
   },
   {
@@ -42,7 +42,7 @@ export const proxyALPN: { title: string; value: string }[] = [
     value: "h3,h2",
   },
   {
-    title: "h2,http/1.1",
+    title: "h2,h1.1",
     value: "h2,http/1.1",
   },
 ];

@@ -225,28 +225,6 @@ export const Header: FC<HeaderProps> = ({ actions }) => {
           >
             {colorMode === "light" ? <DarkIcon /> : <LightIcon />}
           </IconButton>
-
-          <Box
-            css={{ direction: "ltr" }}
-            display="flex"
-            alignItems="center"
-            pr="2"
-            __css={{
-              "&  span": {
-                display: "inline-flex",
-              },
-            }}
-          >
-            <GitHubButton
-              href={REPO_URL}
-              data-color-scheme={`no-preference: ${gBtnColor}; light: ${gBtnColor}; dark: ${gBtnColor};`}
-              data-size="large"
-              data-show-count="true"
-              aria-label="Star Marzban on GitHub"
-            >
-              Star
-            </GitHubButton>
-          </Box>
         </HStack>
       </Box>
     </HStack>

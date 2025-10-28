@@ -68,8 +68,8 @@ export const statusColors: {
     icon: DisabledStatusIcon,
   },
   expired: {
-    statusColor: "orange",
-    bandWidthColor: "orange",
+    statusColor: "red",
+    bandWidthColor: "red",
     icon: ExpiredStatusIcon,
   },
   on_hold: {
